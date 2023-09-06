@@ -1,13 +1,20 @@
-#include <stdio.h>
-
-unsigned int factorial (unsigned int n) 
+#include "main.h"
+/**
+ * _puts_recursion - recursive function to print to screen 
+ *
+ * @s: pointer to the string 
+ *
+ * Retrun: nothing 
+ */
+void _puts_recursion(char *s)
 {
-if (n <= 1)
-return 1 
-return n * factorial (n - 1);
+	if(*s ==! '\0')
+{
+_putchar(*s);
+_puts_recursion(s + 1);
 }
-int main ()
+if(*s == '\0')
 {
-printf("%i\n" , factoril (4));
-return 0;
+_putchar('\n');
+}
 }
